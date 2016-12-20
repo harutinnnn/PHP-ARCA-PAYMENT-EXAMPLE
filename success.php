@@ -9,7 +9,7 @@ $PostFields['orderId'] = $_GET['orderId'];
 $orderId = $_GET['orderId'];
 
 $PostFields = http_build_query($PostFields);
-$orderStatus = $this->Send_CURL_Request_Status(TEST_URL . ARCA_STATUS_URL, $PostFields);
+$orderStatus = $this->Send_CURL_Request(TEST_URL . ARCA_STATUS_URL, $PostFields);
 $orderStatus = json_decode($orderStatus);
 
 
